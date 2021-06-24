@@ -5,10 +5,12 @@ import java.util.Map;
 import java.util.SortedSet;
 
 /**
- * This is a simulation of DB. Ideally, we need three tables here: 1. Parent
- * Transactions 2. Child Transactions 3. Parent Child mapping. Also, all the
- * operations like sorting, limiting the results will be delegated to DB
- * queries. Here, we will do them in-memory
+ * This is a simulation of DB. Ideally, we need three tables here: 
+ * 1. Parent Transactions 
+ * 2. Child Transactions 
+ * 3. Parent Child mapping. 
+ * Also, all the operations like sorting, limiting the results will be delegated to DB
+ * queries. Here, we will do them in-memory.
  */
 public class VirtualDatabase {
 

@@ -14,6 +14,8 @@ import com.daofab.assignment.transactiontracker.repository.ChildTransactionRepos
 import com.daofab.assignment.transactiontracker.repository.ParentTransactionRepository;
 
 /**
+ * Service class which acts as a layer between controller and repositories. It
+ * delegates the request from user to DB with some modifications
  * 
  * @author i0b00j8
  *
@@ -27,7 +29,8 @@ public class TransactionTrackerService {
 	@Autowired
 	private ChildTransactionRepository childRepo;
 
-	public TransactionResponse getParentTransactions(final Integer pageNo, final Integer pageSize, final String sortCol) {
+	public TransactionResponse getParentTransactions(final Integer pageNo, final Integer pageSize,
+			final String sortCol) {
 		int offset = getOffset(pageNo, pageSize);
 		List<ParentTransaction> parentTransactions = parentRepo.getParentTransaction(offset, pageSize, sortCol);
 		return constructTransactionResponse(parentTransactions, pageNo, pageSize, sortCol,
@@ -36,6 +39,7 @@ public class TransactionTrackerService {
 
 	/**
 	 * For all default implementations
+	 * 
 	 * @return
 	 */
 	public TransactionResponse getParentTransactions() {
@@ -44,7 +48,8 @@ public class TransactionTrackerService {
 
 	public TransactionResponse getChildTransactions(final int parentId) {
 		List<ChildTransaction> childTransaction = childRepo.getChildTransactions(parentId);
-		return constructTransactionResponse(childTransaction, 1, childTransaction.size(), "id", childTransaction.size());
+		return constructTransactionResponse(childTransaction, 1, childTransaction.size(), "id",
+				childTransaction.size());
 	}
 
 	private TransactionResponse constructTransactionResponse(final List<? extends ITransaction> transactions,

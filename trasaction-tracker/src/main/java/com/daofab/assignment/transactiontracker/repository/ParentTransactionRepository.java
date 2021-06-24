@@ -15,10 +15,8 @@ import com.daofab.assignment.transactiontracker.pojo.ParentTransaction;
 import com.daofab.assignment.transactiontracker.pojo.VirtualDatabase;
 
 /**
- * This is a simulation of DB. Ideally, we need three tables here: 1. Parent
- * Transactions 2. Child Transactions 3. Parent Child mapping. Also, all the
- * operations like sorting, limiting the results will be delegated to DB
- * queries. Here, we will do them in-memory
+ * Repository class working on ParentTransaction Pojo. All ParentTransaction
+ * related queries are dealt from this class
  * 
  * @author i0b00j8
  *
@@ -50,8 +48,8 @@ public class ParentTransactionRepository implements IRepository<ParentTransactio
 	 * @return
 	 */
 	public List<ParentTransaction> getParentTransaction(final int offset, final int size, final String sortCol) {
-		
-		if(comparatorMap == null) {
+
+		if (comparatorMap == null) {
 			comparatorMap = new HashMap<>();
 			comparatorMap.put("parentId", parentTransactionIdComparator);
 

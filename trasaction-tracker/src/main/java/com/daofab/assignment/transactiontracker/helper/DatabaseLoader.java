@@ -19,7 +19,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
 /**
- * Ideally, we need to use a DB like MySQL. But for the sake of assignment we
+ * Ideally, we need to use a DB like MySQL. But for the sake of assignment we are
  * using {@link ParentTransactionRepository}. This class loads the DB entries to
  * in-memory.
  * 

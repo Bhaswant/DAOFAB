@@ -12,7 +12,8 @@ import com.daofab.assignment.transactiontracker.pojo.ChildTransaction;
 import com.daofab.assignment.transactiontracker.pojo.VirtualDatabase;
 
 /**
- * 
+ * Repository class working on ChildTransaction Pojo. All ChildTransaction
+ * related queries are dealt from this class
  * @author i0b00j8
  *
  */

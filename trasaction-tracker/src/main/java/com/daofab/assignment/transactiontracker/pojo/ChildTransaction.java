@@ -3,7 +3,9 @@ package com.daofab.assignment.transactiontracker.pojo;
 import lombok.Data;
 
 /**
- * Child transaction has a natural ordering on the ids
+ * 
+ * Simulation of Child Transaction table. Child transactions are sorted by
+ * default by id.
  * 
  * @author i0b00j8
  *

@@ -14,6 +14,13 @@ import com.daofab.assignment.transactiontracker.helper.TransactionTrackerConstan
 import com.daofab.assignment.transactiontracker.pojo.TransactionResponse;
 import com.daofab.assignment.transactiontracker.service.TransactionTrackerService;
 
+/**
+ * Controller class acting as an interface for all APIs from the user and to
+ * that are related to Transactions.
+ * 
+ * @author i0b00j8
+ *
+ */
 @RestController
 @RequestMapping("/v1/transactions")
 public class TransactionTrackerController {
@@ -22,7 +29,7 @@ public class TransactionTrackerController {
 
 	@Autowired
 	private TransactionTrackerService service;
-	
+
 	@GetMapping("/ping")
 	public ResponseEntity<String> healthCheck() {
 		return new ResponseEntity<>(TransactionTrackerConstants.OK_MESSAGE, HttpStatus.OK);
@@ -33,26 +40,26 @@ public class TransactionTrackerController {
 			@RequestParam(required = false) Integer pageSize, @RequestParam(required = false) String sortCol) {
 		TransactionResponse transactionResponse;
 		try {
-			if(pageNo == null) {
+			if (pageNo == null) {
 				pageNo = 1;
 			}
-			if(pageSize == null) {
+			if (pageSize == null) {
 				pageSize = TransactionTrackerConstants.DEFAULT_PAGE_SIZE;
 			}
 			transactionResponse = service.getParentTransactions(pageNo, pageSize, sortCol);
-		} catch(Exception e) {
+		} catch (Exception e) {
 			logger.error("Error occured in fetching transactions", e);
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 		return new ResponseEntity<>(transactionResponse, HttpStatus.OK);
 	}
-	
+
 	@GetMapping("/child")
 	public ResponseEntity<TransactionResponse> childTransactions(@RequestParam int parentId) {
 		TransactionResponse response;
 		try {
 			response = service.getChildTransactions(parentId);
-		} catch(Exception e) {
+		} catch (Exception e) {
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 		return new ResponseEntity<>(response, HttpStatus.OK);

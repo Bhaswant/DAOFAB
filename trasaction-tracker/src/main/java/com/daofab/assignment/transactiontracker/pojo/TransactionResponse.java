@@ -5,7 +5,7 @@ import java.util.List;
 import lombok.Data;
 
 /**
- * 
+ * Response sent back to the caller (UI/ Rest client)
  * @author i0b00j8
  *
  */

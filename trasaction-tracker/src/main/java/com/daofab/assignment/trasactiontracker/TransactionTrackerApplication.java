@@ -7,6 +7,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.daofab.assignment.transactiontracker.helper.DatabaseLoader;
 
+/**
+ * Starting point of the application
+ * @author i0b00j8
+ *
+ */
 @SpringBootApplication
 public class TransactionTrackerApplication {
 

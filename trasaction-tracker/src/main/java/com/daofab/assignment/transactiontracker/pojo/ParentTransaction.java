@@ -3,9 +3,8 @@ package com.daofab.assignment.transactiontracker.pojo;
 import lombok.Data;
 
 /**
- * Simulation of Parent Transaction table. This has a connected child
- * transactions. Child transactions are sorted by default by id. However, Parent
- * transactions support sorting through various comparators.
+ * Simulation of Parent Transaction table.
+ * Transactions support sorting through various comparators.
  * 
  * @author i0b00j8
  *
