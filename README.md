@@ -1,3 +1,8 @@
+Transaction Tracker Service:
+1. As the name suggests, this service provides APIs to get the list of transactions based on the seed data provided.
+2. It also provides the installements paid for each transaction occurred.
+
+
 How to Run:&nbsp;
 
 1. Compile the code with the command "mvn clean install" 
