@@ -1,8 +1,8 @@
 How to Run:&nbsp;
 
-Compile the code with the command "mvn clean install" &nbsp;
-Execute the following command: java -jar &nbsp;
-Trigger the following APIs&nbsp;
+Compile the code with the command "mvn clean install" \
+Execute the following command: java -jar <jar file> <parent json> <child json>\
+Trigger the following \
 
 
 Following APIs are supported
