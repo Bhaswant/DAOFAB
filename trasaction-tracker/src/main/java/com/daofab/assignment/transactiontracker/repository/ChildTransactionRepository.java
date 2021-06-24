@@ -1,6 +1,7 @@
 package com.daofab.assignment.transactiontracker.repository;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.SortedSet;
 import java.util.TreeSet;
@@ -37,6 +38,9 @@ public class ChildTransactionRepository implements IRepository<ChildTransaction>
 	
 	public List<ChildTransaction> getChildTransactions(final int parentId) {
 		SortedSet<Integer> childIds = VirtualDatabase.PARENT_CHILD_MAPPING.get(parentId);
+		if(childIds == null) {
+			return Collections.emptyList();
+		}
 		List<ChildTransaction> output = new ArrayList<>();
 		
 		for(int childId : childIds) {
