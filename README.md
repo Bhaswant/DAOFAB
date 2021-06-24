@@ -25,7 +25,7 @@ To fetch child Transactions:
 
 **Anatomy of the service**:
 This service is divided into 4 layers:
-    a. Controller - First point of contact for the REST API
-    b. Service - Layer that performs required business logic and interacts with both DB and controller.
-    c. Repository - Layer that sits nearer to the business logic but that contains CRUD of entities.
-    d. Database - Actual persistence of the data.
+    1. Controller - First point of contact for the REST API
+    2. Service - Layer that performs required business logic and interacts with both DB and controller.
+    3. Repository - Layer that sits nearer to the business logic but that contains CRUD of entities.
+    4. Database - Actual persistence of the data.
