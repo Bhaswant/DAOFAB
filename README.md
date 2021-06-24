@@ -23,9 +23,9 @@ To fetch parent transactions:
 To fetch child Transactions:
 5. /v1/transactions/child?parentId= - Returns the sorted list of children along with their parent attributes. Additional attributes like parent Id are sent for clarity. UI can filter them out.
 
-**Anatomy of the service**:
-This service is divided into 4 layers:
+**Anatomy of the service**:\
+This service is divided into 4 layers:\
     1. Controller - First point of contact for the REST API\
     2. Service - Layer that performs required business logic and interacts with both DB and controller.\
-    3. Repository - Layer that sits nearer to the business logic but that contains CRUD of entities.
+    3. Repository - Layer that sits nearer to the business logic but that contains CRUD of entities.\
     4. Database - Actual persistence of the data.
