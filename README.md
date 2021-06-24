@@ -1,6 +1,7 @@
 Transaction Tracker Service:
 1. As the name suggests, this service provides APIs to get the list of transactions based on the seed data provided.
 2. It also provides the installements paid for each transaction occurred.
+3. These APIs are meant for the use of UI, however are user friendly as well since they output data in json files.
 
 
 How to Run:&nbsp;
