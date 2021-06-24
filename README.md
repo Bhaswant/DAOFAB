@@ -1,6 +1,6 @@
 How to Run:&nbsp;
 
-1. Compile the code with the command "mvn clean install" \
+1. Compile the code with the command "mvn clean install" 
 2. Execute the following command: java -jar <jar file> <parent json> <child json>\
 3. Trigger the following
 
