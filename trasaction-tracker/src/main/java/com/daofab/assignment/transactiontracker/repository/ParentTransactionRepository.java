@@ -52,7 +52,6 @@ public class ParentTransactionRepository implements IRepository<ParentTransactio
 		if (comparatorMap == null) {
 			comparatorMap = new HashMap<>();
 			comparatorMap.put("parentId", parentTransactionIdComparator);
-
 		}
 		// It is service's responsibility to provide valid offset
 		if (offset >= VirtualDatabase.PARENT_TRANSACTIONS.size()) {
