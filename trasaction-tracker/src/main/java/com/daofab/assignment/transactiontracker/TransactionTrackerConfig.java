@@ -1,4 +1,4 @@
-package com.daofab.assignment.trasactiontracker;
+package com.daofab.assignment.transactiontracker;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
